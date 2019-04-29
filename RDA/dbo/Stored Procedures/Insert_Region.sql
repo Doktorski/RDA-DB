@@ -1,0 +1,19 @@
+﻿CREATE PROCEDURE Insert_Region
+(
+	@Naziv NVARCHAR (30)
+)
+AS
+BEGIN
+	BEGIN TRANSACTION
+
+	INSERT INTO Region (Naziv) VALUES (@Naziv)
+
+	IF @@ERROR <> 0
+		BEGIN
+			ROLLBACK;
+		END
+	ELSE
+		BEGIN
+			COMMIT;
+		END
+END

@@ -1,0 +1,10 @@
+C:\Users\tokio\source\repos\RDA\RDA\bin\Debug\RDA.dacpac
+C:\Users\tokio\source\repos\RDA\RDA\bin\Debug\RDA.dll
+C:\Users\tokio\source\repos\RDA\RDA\bin\Debug\RDA.pdb
+C:\Users\tokio\source\repos\RDA\RDA\obj\Debug\RDA.dll
+C:\Users\tokio\source\repos\RDA\RDA\obj\Debug\RDA.pdb
+C:\Users\tokio\source\repos\RDA\RDA\obj\Debug\Model.xml
+C:\Users\tokio\source\repos\RDA\RDA\obj\Debug\refactor.xml
+C:\Users\tokio\source\repos\RDA\RDA\obj\Debug\postdeploy.sql
+C:\Users\tokio\source\repos\RDA\RDA\obj\Debug\predeploy.sql
+C:\Users\tokio\source\repos\RDA\RDA\obj\Debug\RDA.sqlprojAssemblyReference.cache

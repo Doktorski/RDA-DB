@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>RDA</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{23d04b01-c417-4616-afa9-b5e63fd0f58c}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>RDA</RootNamespace>
+    <AssemblyName>RDA</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Zaposleni.sql" />
+    <Build Include="dbo\Tables\TV_kuca.sql" />
+    <Build Include="dbo\Tables\Tip_reklame.sql" />
+    <Build Include="dbo\Tables\Struktura_vlasnistva.sql" />
+    <Build Include="dbo\Tables\Stavka_narudzenice.sql" />
+    <Build Include="dbo\Tables\Reklama.sql" />
+    <Build Include="dbo\Tables\Region.sql" />
+    <Build Include="dbo\Tables\Privredna_grana.sql" />
+    <Build Include="dbo\Tables\Prikazuje.sql" />
+    <Build Include="dbo\Tables\Pozicija_zaposlenog.sql" />
+    <Build Include="dbo\Tables\Politicka_stranka.sql" />
+    <Build Include="dbo\Tables\Odbor.sql" />
+    <Build Include="dbo\Tables\Narudzbenica.sql" />
+    <Build Include="dbo\Tables\Kompanija.sql" />
+    <Build Include="dbo\Tables\Kanali.sql" />
+    <Build Include="dbo\Tables\Grad_.sql" />
+    <Build Include="dbo\Tables\Cenovnik.sql" />
+    <Build Include="dbo\Tables\Agencija.sql" />
+    <Build Include="dbo\Functions\Nedelje_U_Godini.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Zaposleni.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_TV_kuca.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Tip_reklame.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Struktura_vlasnistva.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Stavka_narudzenice.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Reklama.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Region.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Privredna_grana.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Prikazuje.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Pozicija_zaposlenog.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Politicka_stranka.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Odbor.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Narudzbenica.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Kompanija.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Kanali.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Grad.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Cenovnik.sql" />
+    <Build Include="dbo\Stored Procedures\Insert_Agencija.sql" />
+  </ItemGroup>
+</Project>
